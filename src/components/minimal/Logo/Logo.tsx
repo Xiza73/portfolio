@@ -17,7 +17,7 @@ const Logo: React.FC<LogoInterface> = () => {
 
   return (
     <Link href={"/"}>
-      <>
+      <a>
         <Image
           id="logo"
           src={img}
@@ -26,7 +26,7 @@ const Logo: React.FC<LogoInterface> = () => {
           alt="logo"
           className="cursor-pointer"
         />
-      </>
+      </a>
     </Link>
   );
 };
