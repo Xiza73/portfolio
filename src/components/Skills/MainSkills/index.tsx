@@ -1,0 +1,1 @@
+export { default as MainSkills } from './MainSkills';
