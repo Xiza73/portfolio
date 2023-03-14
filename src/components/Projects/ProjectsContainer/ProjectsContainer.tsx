@@ -1,9 +1,12 @@
 import { Store } from "@/app/store";
 import React from "react";
 import { useSelector } from "react-redux";
-import dynamic from "next/dynamic";
+import dynamic, { LoaderComponent } from "next/dynamic";
+import { CardInterface } from "./Card/Card";
 
-const Card = dynamic(import("./Card").then((mod) => mod.Card));
+const Card = dynamic(
+  import("./Card").then((mod) => mod.Card) as LoaderComponent<CardInterface>
+);
 
 export interface ProjectsContainerInterface {}
 

@@ -1,9 +1,9 @@
-export const getStorage = <T>(key: string): T | undefined => {
+export const getStorage = (key: string) => {
   if (typeof window === "undefined") return;
   const item = localStorage.getItem(key);
-  return item as T;
+  return item;
 };
 
-export const setStorage = <T>(key: string, value: T): void => {
+export const setStorage = (key: string, value: string): void => {
   typeof window !== "undefined" && localStorage.setItem(key, value as string);
 };

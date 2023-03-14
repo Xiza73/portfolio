@@ -1,6 +1,11 @@
 import { content } from "@/utils/data/content";
 import { createSlice } from "@reduxjs/toolkit";
-import { Options, OptionsConstants } from "../../utils/models/Options";
+import {
+  LanguageName,
+  Options,
+  OptionsConstants,
+  ThemeName,
+} from "../../utils/models/Options";
 import { getStorage, setStorage } from "../../utils/functions/index";
 
 const initialState: Options = {
@@ -46,12 +51,8 @@ export const optionsSlice = createSlice<
       setStorage("theme", action.payload.name);
     },
     getStorageConfig(state) {
-      const language = getStorage<OptionsConstants.EN | OptionsConstants.ES>(
-        "language"
-      );
-      const theme = getStorage<OptionsConstants.LIGHT | OptionsConstants.DARK>(
-        "theme"
-      );
+      const language = getStorage("language") as LanguageName;
+      const theme = getStorage("theme") as ThemeName;
       if (language) {
         state.language = {
           name: language,
