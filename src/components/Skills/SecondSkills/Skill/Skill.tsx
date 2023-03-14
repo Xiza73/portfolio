@@ -8,7 +8,10 @@ export interface SkillInterface {
 
 const Skill: React.FC<SkillInterface> = ({ name, Icon }) => {
   return (
-    <div className="flex flex-col items-center justify-start mx-6 mt-2 mb-4 max-w-[64px]">
+    <div
+      className="flex flex-col items-center justify-start mx-6 mt-2 mb-4 max-w-[64px]"
+      data-aos="zoom-in"
+    >
       <div className="flex justify-center items-center mb-1">
         <Icon className="text-5xl dark:fill-light-300" />
       </div>

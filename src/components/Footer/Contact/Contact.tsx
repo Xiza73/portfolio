@@ -68,7 +68,10 @@ const Contact: React.FC<ContactInterface> = () => {
   }, [loading]);
 
   return (
-    <div className="flex flex-col justify-center items-center w-80 mx-auto mb-12 md:mb-0 md:order-2">
+    <div
+      className="flex flex-col justify-center items-center w-80 mx-auto mb-12 md:mb-0 md:order-2"
+      data-aos="zoom-in"
+    >
       <h1 className="title mb-2">{title}</h1>
       <form
         onSubmit={handleSubmit}

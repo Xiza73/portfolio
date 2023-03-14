@@ -14,7 +14,10 @@ const PercentageCircle: React.FC<PercentageCircleInterface> = ({
 }) => {
   return (
     <>
-      <div className="flex flex-col items-center justify-start mx-4 mt-2 mb-4">
+      <div
+        className="flex flex-col items-center justify-start mx-4 mt-2 mb-4"
+        data-aos="zoom-in"
+      >
         <div className="relative w-24 h-24 mb-1">
           <svg viewBox="0 0 36 36" className="block absolute">
             <path

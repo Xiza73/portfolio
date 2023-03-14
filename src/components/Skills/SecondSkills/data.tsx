@@ -1,5 +1,12 @@
 import { FaAws } from "react-icons/fa";
-import { SiJava, SiSpring, SiPostgresql, SiDocker } from "react-icons/si";
+import {
+  SiJava,
+  SiSpring,
+  SiDocker,
+  SiCsharp,
+  SiMicrosoftsqlserver,
+  SiJenkins,
+} from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
 import { SkillInterface } from "./Skill/Skill";
 
@@ -13,10 +20,6 @@ export const skills: SkillInterface[] = [
     Icon: SiSpring,
   },
   {
-    name: "PostgreSQL",
-    Icon: SiPostgresql,
-  },
-  {
     name: "MySQL",
     Icon: GrMysql,
   },
@@ -27,5 +30,17 @@ export const skills: SkillInterface[] = [
   {
     name: "AWS",
     Icon: FaAws,
+  },
+  {
+    name: "C#",
+    Icon: SiCsharp,
+  },
+  {
+    name: "SQL Server",
+    Icon: SiMicrosoftsqlserver,
+  },
+  {
+    name: "Jenkins",
+    Icon: SiJenkins,
   },
 ];

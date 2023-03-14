@@ -1,10 +1,13 @@
-import { FaReact, FaNodeJs, FaAngular } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaAngular, FaHtml5, FaCss3 } from "react-icons/fa";
 import {
   SiNextdotjs,
   SiNuxtdotjs,
   SiNestjs,
   SiExpress,
   SiMongodb,
+  SiPostgresql,
+  SiJavascript,
+  SiTypescript,
 } from "react-icons/si";
 import { RiVuejsLine } from "react-icons/ri";
 import { PercentageCircleInterface } from "./PercentageCircle/PercentageCircle";
@@ -54,5 +57,30 @@ export const skills: PercentageCircleInterface[] = [
     name: "MongoDB",
     percentage: 70,
     Icon: SiMongodb,
+  },
+  {
+    name: "PostgreSQL",
+    percentage: 70,
+    Icon: SiPostgresql,
+  },
+  {
+    name: "JavaScript",
+    percentage: 90,
+    Icon: SiJavascript,
+  },
+  {
+    name: "TypeScript",
+    percentage: 90,
+    Icon: SiTypescript,
+  },
+  {
+    name: "HTML",
+    percentage: 100,
+    Icon: FaHtml5,
+  },
+  {
+    name: "CSS",
+    percentage: 100,
+    Icon: FaCss3,
   },
 ];

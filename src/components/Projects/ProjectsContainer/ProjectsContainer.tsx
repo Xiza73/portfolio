@@ -1,7 +1,9 @@
 import { Store } from "@/app/store";
 import React from "react";
 import { useSelector } from "react-redux";
-import { Card } from "./Card";
+import dynamic from "next/dynamic";
+
+const Card = dynamic(import("./Card").then((mod) => mod.Card));
 
 export interface ProjectsContainerInterface {}
 
@@ -11,12 +13,13 @@ const ProjectsContainer: React.FC<ProjectsContainerInterface> = () => {
   );
 
   return (
-    <div className="flex flex-wrap justify-around w-full px-6 max-w-[1000px]">
+    <div className="flex flex-wrap justify-around w-full px-6 max-w-[1200px]">
       {data.map((project, i) => (
         <Card
           key={`pjt-${i}`}
           name={project.name}
-          link={project.link}
+          visit={project.visit}
+          repo={project.repo}
           description={project.description}
           img={project.img}
         />

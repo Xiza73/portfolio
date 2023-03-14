@@ -1,5 +1,4 @@
 import { Store } from "@/app/store";
-import Link from "next/link";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { MdContent } from "./MdContent";
@@ -13,19 +12,24 @@ const Links: React.FC<LinksInterface> = () => {
     (store: Store) => store.options.content.navbar
   );
 
-  const handleChecked = () => {
-    setChecked(!checked);
+  const handleChecked = () => setChecked(!checked);
+  const scrollToId = (id: string) => {
+    const element = document.getElementById(id);
+    if (!element) return;
+    element.scrollIntoView({ behavior: "smooth" });
   };
 
   const links = Object.values(navbarLinks).map((link) => (
-    <Link key={link} href={`#${link}`} scroll={true}>
-      <div
-        className="font-normal hover:text-lg bg-base-200 dark:bg-dark-base-200 md:bg-[transparent] md:dark:bg-[transparent] text-center py-1 capitalize first:rounded-t-md last:rounded-b-md md:h-min md:flex md:my-auto dark:text-light-100 cursor-pointer"
-        onClick={handleChecked}
-      >
-        {link}
-      </div>
-    </Link>
+    <div
+      key={link}
+      className="font-normal hover:text-lg bg-base-200 dark:bg-dark-base-200 md:bg-[transparent] md:dark:bg-[transparent] text-center py-1 capitalize first:rounded-t-md last:rounded-b-md md:h-min md:flex md:my-auto dark:text-light-100 cursor-pointer"
+      onClick={() => {
+        scrollToId(link);
+        handleChecked();
+      }}
+    >
+      {link}
+    </div>
   ));
   return (
     <>

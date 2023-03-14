@@ -16,7 +16,9 @@ const Projects: React.FC<ProjectsInterface> = () => {
     <div className="w-full relative pt-1 pb-14 bg-base-300 dark:bg-dark-base-300">
       <div id={projects} className="absolute -top-28"></div>
       <div className="flex flex-col justify-center items-center mx-auto">
-        <h1 className="title">{title}</h1>
+        <h1 className="title" data-aos="zoom-in">
+          {title}
+        </h1>
         <ProjectsContainer />
       </div>
     </div>

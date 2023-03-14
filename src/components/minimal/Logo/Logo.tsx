@@ -2,7 +2,6 @@ import { Store } from "@/app/store";
 import { images } from "@/utils/constants";
 import { OptionsConstants } from "@/utils/models/Options";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import { useSelector } from "react-redux";
 
@@ -15,19 +14,21 @@ const Logo: React.FC<LogoInterface> = () => {
 
   const img = name === OptionsConstants.DARK ? images.logoDark : images.logo;
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <Link href={"/"}>
-      <a>
-        <Image
-          id="logo"
-          src={img}
-          width={100}
-          height={100}
-          alt="logo"
-          className="cursor-pointer"
-        />
-      </a>
-    </Link>
+    <a onClick={scrollToTop}>
+      <Image
+        id="logo"
+        src={img}
+        width={100}
+        height={100}
+        alt="logo"
+        className="cursor-pointer"
+      />
+    </a>
   );
 };
 

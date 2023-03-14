@@ -8,38 +8,38 @@ import { Store } from "@/app/store";
 export interface CardsContainerInterface {}
 
 const CardsContainer: React.FC<CardsContainerInterface> = () => {
-  const { studies, work, hobbies } = useSelector(
-    (store: Store) => store.options.content.about
+  const about = useSelector(
+    (store: Store) => store.options.content.about.cards
   );
+
+  const cardsData = [
+    {
+      Icon: IoIosSchool,
+      text: about.studies,
+    },
+    {
+      Icon: MdOutlineWork,
+      text: about.work,
+    },
+    {
+      Icon: IoIosMusicalNotes,
+      text: about.hobbies,
+    },
+  ];
   return (
     <div className="flex flex-wrap justify-around w-full px-6 max-w-[1344px]">
-      <Card
-        icon={
-          <IoIosSchool
-            size={80}
-            className="fill-dark-base-300 dark:fill-light-300"
-          />
-        }
-        text={studies}
-      />
-      <Card
-        icon={
-          <MdOutlineWork
-            size={80}
-            className="fill-dark-base-300 dark:fill-light-300"
-          />
-        }
-        text={work}
-      />
-      <Card
-        icon={
-          <IoIosMusicalNotes
-            size={80}
-            className="fill-dark-base-300 dark:fill-light-300"
-          />
-        }
-        text={hobbies}
-      />
+      {cardsData.map(({ Icon, text }, id) => (
+        <Card
+          key={`card-${id}`}
+          icon={
+            <Icon
+              size={80}
+              className="fill-dark-base-300 dark:fill-light-300"
+            />
+          }
+          text={text}
+        />
+      ))}
     </div>
   );
 };

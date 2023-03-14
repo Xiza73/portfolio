@@ -6,9 +6,9 @@ export interface MdContentInterface {
 
 const MdContent: React.FC<MdContentInterface> = ({ links }) => {
   return (
-    <div className="hidden invisible md:grid md:visible grid-rows-1 grid-flow-col gap-7">
+    <section className="hidden invisible md:grid md:visible grid-rows-1 grid-flow-col gap-7">
       {links}
-    </div>
+    </section>
   );
 };
 

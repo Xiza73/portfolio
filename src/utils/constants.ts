@@ -1,7 +1,7 @@
 export const images = {
-  logo: "https://res.cloudinary.com/xizascloud/image/upload/v1662514560/portfolio/logo_normal.png",
+  logo: "https://res.cloudinary.com/xizascloud/image/upload/v1662514560/portfolio/light_logo.svg",
   logoDark:
-    "https://res.cloudinary.com/xizascloud/image/upload/v1662514560/portfolio/logo_dark.png",
+    "https://res.cloudinary.com/xizascloud/image/upload/v1662514560/portfolio/dark_logo.svg",
   text: "https://res.cloudinary.com/xizascloud/image/upload/v1662514560/portfolio/text_normal.png",
   textDark:
     "https://res.cloudinary.com/xizascloud/image/upload/v1662514560/portfolio/text_dark.png",
